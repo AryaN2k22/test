@@ -8,4 +8,13 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
   },
+  userAttributes:{
+    "custom:userRole":{
+      dataType: "String",
+      mutable:true,
+      maxLen:2048,
+      minLen:0
+    },
+  },
+  groups:["Instructor",'Student']
 });
